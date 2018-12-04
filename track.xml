@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="Garmin Connect" version="1.1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+  xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <link href="connect.garmin.com">
+      <text>Garmin Connect</text>
+    </link>
+    <time>2017-06-07T12:55:10.000Z</time>
+  </metadata>
+  <wpt lat="1.371203" lon="103.843766">
+    <name>TP001</name>
+  </wpt>
+  <wpt lat="1.37098" lon="103.84415">
+    <name>TP002</name>
+  </wpt>
+  <wpt lat="1.3709" lon="103.84414">
+    <name>TP003</name>
+  </wpt>
+  <wpt lat="1.37097" lon="103.84363">
+    <name>TP004</name>
+  </wpt>
+
+  <wpt lat="1.370214" lon="103.843484">
+    <name>Sheng Shiong Supermarket</name>
+  </wpt>
+
+  <wpt lat="1.370135" lon="103.844093">
+    <name>Blk 121 ANG MO KIO AVE 3 coffee shop</name>
+  </wpt>
+
+  <wpt lat="1.370477" lon="103.844681">
+    <name>AWWA Community Home for Senior Citizens</name>
+  </wpt>
+
+  <wpt lat="1.369328" lon="103.848350">
+    <name>AMK HUB</name>
+  </wpt>
+  
+  <wpt lat="1.366745" lon="103.846012">
+    <name>Family Dental Surgery</name>
+  </wpt>
+</gpx>
