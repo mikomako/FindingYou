@@ -1,0 +1,139 @@
+  /*//////////////////////////////////////////////////////////////////
+[  LOGIN PAGE ] */
+.home{
+    width:100%;
+    margin: 0 auto;
+}
+
+.homeContainer{
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #4b4b4b;
+    /*margin-top: -70px;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+}
+
+.homeWrap {
+    width: 640px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 177px 130px 33px 95px;
+    
+  }
+
+/*------------------------------------------------------------------
+[  LOGO & HEADER ]*/
+.home-header {
+    width: 640px;
+    margin-left:-95px;
+    margin-top:-178px;
+    
+}
+.home-header img{
+    width: 640px;
+}
+
+.home-logo{
+    width:316px;
+}
+
+.home-logo img{
+    max-width: 100%;
+    margin-top: 10px;
+    margin-left: 160px;
+}
+
+/*------------------------------------------------------------------
+[  LOGIN FORM  ]*/
+.homeForm {
+    width: 100%;
+}
+
+.homeForm-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    margin-top:5px;
+    margin-left: 160px;
+  
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+.create a{
+    margin-top: 15px;
+    margin-left: 230px;
+
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    display: block;
+}
+
+.create .created i{
+    font-size: 17px;
+}
+
+.terms{
+    margin-top: 10px;
+    float: clear;
+    font-family: Poppins-Regular;
+}
+
+ .terms .tc-txt1 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+    display: block;
+    text-align: center;
+  }
+  
+.terms .tc-txt2 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+    display: block;
+    text-align: center;
+  }
+
+/*//////////////////////////////////////////////////////////////////
+[ RESPONSIVE ] */
+@media(max-width:640px){
+    .homeWrap{
+        padding: 100px 70px 33px 70px;
+    }
+
+    .create a{
+        margin-top: 10px;
+        margin-left: 260px;
+    }
+
+    .home-logo img{
+        max-width: 100%;
+        margin-top: 10px;
+        margin-left: 160px;
+    }
+}

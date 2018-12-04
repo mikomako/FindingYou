@@ -1,0 +1,57 @@
+  /*//////////////////////////////////////////////////////////////////
+[  HISTORYLOG PAGE ] */
+.historylog{
+    width:100%;
+    margin: 0 auto;
+}
+
+.historylogContainer{
+    width: 100%;  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+}
+
+/*------------------------------------------------------------------
+[  HISTORYLOG CONTENT ]*/
+
+.navbar .h3menu{
+    position:relative; 
+    bottom:48px; 
+    left:50px;
+}
+
+.navbar .h3location{
+    position:relative; 
+    bottom:42px; 
+    left:230px;
+    font-size: 20px;
+    color: #333;
+}
+.navbar h2{
+    font-size: 20px;
+    color: #333;
+}
+
+.homeicon{
+    float: right;
+    height:40px;
+    width:40px;
+    position:relative; 
+
+}
+.mini{
+    height:50px;
+    width:50px;
+    position:relative; 
+
+}
+
+

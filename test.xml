@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="Garmin Connect" version="1.1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+  xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <link href="connect.garmin.com">
+      <text>Garmin Connect</text>
+    </link>
+    <time>2017-06-07T12:55:10.000Z</time>
+  </metadata>
+  <wpt lat="1.436811" lon="103.786314">
+    <name>Ofo Bike</name>
+    <type>Bikes</type>
+  </wpt>
+  <wpt lat="1.436640" lon="103.785623">
+  </wpt>
+  <wpt lat="1.435535" lon="103.785228">
+  </wpt>
+  <wpt lat="1.435867" lon="103.787159">
+  </wpt>
+  <wpt lat="1.436967" lon="103.786706">
+  </wpt>
+  <wpt lat="1.437187" lon="103.786060">
+  </wpt>
+  <wpt lat="1.437048" lon="103.785287">
+  </wpt>
+  <wpt lat="1.437948" lon="103.785223">
+  </wpt>
+</gpx>

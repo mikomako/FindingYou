@@ -1,0 +1,51 @@
+  /*//////////////////////////////////////////////////////////////////
+[  LIST PAGE ] */
+.list{
+    width:100%;
+    margin: 0 auto;
+}
+
+.listContainer{
+    width: 100%;  
+    /* min-height: 100vh; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+
+}
+/*------------------------------------------------------------------
+[  LIST CONTENT ]*/
+.listcenter{
+    /* width:100%; */
+    width: 300px;
+    /* height:600px; */
+    display:block;
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative;
+    margin:auto;
+}
+.head{
+    margin-top:-10px;
+    margin-left:50px;
+}
+.homeicon{
+    float: right;
+    height:40px;
+    width:40px;
+    position:relative; 
+
+}
+.mini{
+    height:50px;
+    width:50px;
+    position:relative; 
+
+}
