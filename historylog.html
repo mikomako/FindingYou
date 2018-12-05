@@ -48,94 +48,97 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+            try {
+                $.ajax({
+                    type: 'GET',
+                    url: 'track.xml',
+                    //processData: false,
+                    dataType: "xml",
+                    success: function (xml) {
+                        window.initialize();
+                        var img = {
+                            url: "https://s3-ap-southeast-1.amazonaws.com/information.system/Granny.PNG",
+                            scaledSize: new google.maps.Size(90, 120),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(50, 110)
+                        };
+                        var contents =
+                            [
+                                "<p><b>2.45pm<b></p><p><b>Koh Bee Ling is here!!!</b></p><br>127 Ang Mo Kio Ave 3,<br>Block 127, Singapore 560127",
+                                "<b>Traffic<b>",
+                                "<b>Traffic<b>",
+                                "Zhenyi Veggie Place",
+                                "Sheng Siong Supermarket",
+                                "Coffee Shop",
+                                "AWWA Community Home for Senior Citizens",
+                                "AMK Hub",
+                                "Family Dental Surgery"
+                            ];
 
-            $.ajax({
-                type: 'GET',
-                url: 'track.xml',
-                //processData: false,
-                dataType: "xml",
-                success: function (xml) {
-                    window.initialize();
-                    var img = {
-                        url: "https://s3-ap-southeast-1.amazonaws.com/information.system/Granny.PNG",
-                        scaledSize: new google.maps.Size(90, 120),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(50, 110)
-                    };
-                    var contents =
-                        [
-                            "<p><b>2.45pm<b></p><p><b>Koh Bee Ling is here!!!</b></p><br>127 Ang Mo Kio Ave 3,<br>Block 127, Singapore 560127",
-                            "<b>Traffic<b>",
-                            "<b>Traffic<b>",
-                            "Zhenyi Veggie Place",
-                            "Sheng Siong Supermarket",
-                            "Coffee Shop",
-                            "AWWA Community Home for Senior Citizens",
-                            "AMK Hub",
-                            "Family Dental Surgery"
-                        ];
+                        var lineCoordinates = [];
 
-                    var lineCoordinates = [];
+                        counter = 0;
 
-                    counter = 0;
+                        $(xml).find('wpt').each(function (e) {
+                            console.log(e);
+                            var lat = $(this).attr('lat');
 
-                    $(xml).find('wpt').each(function (e) {
-                        console.log(e);
-                        var lat = $(this).attr('lat');
+                            var lon = $(this).attr('lon');
 
-                        var lon = $(this).attr('lon');
+                            var latlng = new google.maps.LatLng(lat, lon);
 
-                        var latlng = new google.maps.LatLng(lat, lon);
+                            lineCoordinates.push(latlng);
 
-                        lineCoordinates.push(latlng);
+                            if (counter == 0) {
+                                var marker = new google.maps.Marker({
+                                    position: latlng,
+                                    icon: img,
+                                    animation: google.maps.Animation.BOUNCE,
+                                    map: map
+                                });
 
-                        if (counter == 0) {
-                            var marker = new google.maps.Marker({
-                                position: latlng,
-                                icon: img,
-                                animation: google.maps.Animation.BOUNCE,
-                                map: map
+
+
+                            }
+                            else {
+                                var marker = new google.maps.Marker({
+                                    position: latlng,
+                                    map: map
+                                });
+                            }
+
+                            var infowindow = new google.maps.InfoWindow({
+                                content: contents[counter]
+                            });
+                            if (counter == 0) {
+                                infowindow.open(map, marker);
+                            }
+                            marker.addListener('click', function () {
+                                infowindow.open(map, marker);
                             });
 
 
+                            counter++;
 
-                        }
-                        else {
-                            var marker = new google.maps.Marker({
-                                position: latlng,
-                                map: map
-                            });
-                        }
 
-                        var infowindow = new google.maps.InfoWindow({
-                            content: contents[counter]
-                        });
-                        if (counter == 0) {
-                            infowindow.open(map, marker);
-                        }
-                        marker.addListener('click', function () {
-                            infowindow.open(map, marker);
                         });
 
+                        var line = new google.maps.Polyline({
+                            path: lineCoordinates,
+                            geodesic: true,
+                            strokeColor: '#FFB6C1',
+                            strokeOpacity: 1.0,
+                            strokeWeight: 5,
+                        });
 
-                        counter++;
-
-
-                    });
-
-                    var line = new google.maps.Polyline({
-                        path: lineCoordinates,
-                        geodesic: true,
-                        strokeColor: '#FFB6C1',
-                        strokeOpacity: 1.0,
-                        strokeWeight: 5,
-                    });
-
-                    line.setMap(map);
+                        line.setMap(map);
 
 
-                }
-            });
+                    }
+                });
+            } catch (error) {
+                console.log(error);
+            }
             console.log("Start");
 
         });
